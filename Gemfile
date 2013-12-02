@@ -43,3 +43,7 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+# Use authentication
+gem 'devise'
+# Design
+gem 'bootstrap-sass-rails'
