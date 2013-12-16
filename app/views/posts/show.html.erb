@@ -9,26 +9,10 @@
 </p>
 
 <h2>Agrega un comentario:</h2>
-<%= form_for([@post, @post.comments.build]) do |f| %>
-	<% if false %>
-		<%= render "comments/form" %>
-	<% end %>
-	<p>
-		<%= f.label :commenter %><br />
-		<%= f.text_field :commenter %>
-	</p>
-	<p>
-	<%= f.label :body %><br />
-	<%= f.text_area :body %>
-	</p>
-	<p>
-	<%= f.submit %>
-	</p>
-<% end %>
+<%= render "comments/form" %>
 <h2>Comentarios</h2>
-<% @post.comments.each do |comment| %>
-  <%= render @post.comments %>
-<% end %>
+<%= render @post.comments %>
+
 
 <%= link_to 'Back', posts_path %>
 <%= link_to 'Edit', edit_post_path(@post) %>
